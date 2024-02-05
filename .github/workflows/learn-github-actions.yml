@@ -15,3 +15,6 @@ jobs:
       - name: Back Up
         if: ${{ failure() }}
         run: echo "Failed"
+      - name: Run through
+        if: ${{ !failure() }}
+        run: echo "Success"
